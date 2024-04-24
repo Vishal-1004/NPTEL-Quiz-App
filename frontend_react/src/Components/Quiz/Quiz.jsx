@@ -94,7 +94,7 @@ const Quiz = () => {
 
   return (
     <div className="quizContainer">
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between heading">
         <h1>NPTEL - Forest and Their Management</h1>
         {start ? (
           <p>
