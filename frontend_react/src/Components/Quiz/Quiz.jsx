@@ -21,6 +21,7 @@ const Quiz = () => {
   //let [question, setQuestion] = useState(allQuestions[index])
   let [lock, setLock] = useState(false)
   let [score, setScore] = useState(0)
+  let [wrong, setWrong] = useState(0)
   let [result, setResult] = useState(false)
   let [start, setStart] = useState(false)
 
@@ -51,6 +52,7 @@ const Quiz = () => {
         setScore((prev) => prev + 1)
         ele.target.classList.add('correct')
       } else {
+        setWrong((prev) => prev + 1)
         callToast('error', 'Wrong Answer!')
         ele.target.classList.add('wrong')
         option_array[allQuestions[index].ans - 1].current.classList.add('correct')
@@ -92,7 +94,19 @@ const Quiz = () => {
 
   return (
     <div className="quizContainer">
-      <h1>NPTEL - Forest and Their Management</h1>
+      <div className="d-flex justify-content-between align-items-center">
+        <h1>NPTEL - Forest and Their Management</h1>
+        {start ? (
+          <p>
+            <strong>Correct: </strong>
+            {score} &nbsp;
+            <strong>Wrong: </strong>
+            {wrong}
+          </p>
+        ) : (
+          <></>
+        )}
+      </div>
       <hr />
       {start ? (
         result ? (
