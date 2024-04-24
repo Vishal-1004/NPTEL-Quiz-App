@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="btn-frg-style ms-auto">
             <Link
               className="btn btn-outline-dark px-3 me-3 my-1"
-              to="https://github.com/Vishal-1004/VIT-Grade-Guru"
+              to="https://github.com/Vishal-1004/NPTEL-Quiz-App"
               target="_blank"
               role="button"
             >
