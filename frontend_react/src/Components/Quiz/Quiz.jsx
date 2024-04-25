@@ -84,6 +84,7 @@ const Quiz = () => {
     setIndex(0)
     //setQuestion(allQuestions[0])
     setScore(0)
+    setWrong(0)
     setLock(false)
     setResult(false)
   }
